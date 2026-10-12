@@ -38,20 +38,22 @@ Your task is to containerize this existing application using Docker. You need to
 
 ## Starting the Application
 
-- To build the docker image run the command:
+- To build the docker image run the command: docker build -t my-node-app .
 
 ```bash
 
 ```
 
-- To run your docker container in port 3000 run the command:
+- To run your docker container in port 3000 run the command: docker run -p 3000:3000 my-node-app
 
 ```bash
 
 ```
 
 ## Reflection Question
-**Answer the following question in the space below**: How does containerization with Docker differ from using virtual machines, and why might a development team choose Docker containers over VMs for deploying applications like the one you just containerized?
+How does containerization with Docker differ from using virtual machines, and why might a development team choose Docker containers over VMs for deploying applications like the one you just containerized?
+
+The difference between a containerization tool like Docker and a virtual machine is that Docker virtualizes an operating system and runs as a process on the host's OS kernel. Whereas a virtual machine virtualizes hardware and basically acts as its own separate computer. This difference is why a development team might choose a containerization tool instead of a VM. Tools like Docker are lightweight, fast to start, and space efficient. On the other hand, VMs using vast system resources run extra, usually unused, OS processes and take much longer to start. VMs have their place, but for most applications Docker is a much lighter and more efficient option.
 
 
 
